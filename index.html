@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MAria teste port</title>
+  <meta name="description" content="Um site de uma página feito apenas com HTML e CSS embutido.">
+  <style>
+    /* Reset simples */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#222}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout parte superior */
+    header{background:linear-gradient(135deg,#1607e0 0%,#f51505 100%);color:rgb(255, 255, 255);padding:2rem 1rem}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    nav{display:flex;gap:1rem;align-items:center}
+    .brand{font-weight:700;font-size:1.25rem}
+    .spacer{flex:1}
+    nav a.button{background:rgba(255, 253, 253, 0.534);padding:.5rem .9rem;border-radius:8px}
+
+    main{padding:2rem 1rem}
+    .hero{display:grid;grid-template-columns:1fr;gap:1.25rem;align-items:center}
+    .hero h1{font-size:2rem;margin-bottom:.25rem}
+    .hero p{color:#444}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+    .card{border-radius:12px;padding:1rem;background:#f1f1f1;border:1px solid #eee;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    footer{padding:1.5rem 1rem;background:#f8fafc;margin-top:2rem}
+
+    /* parte visual infe*/ 
+
+    .button-primary{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:#0f172a;color:white;font-weight:600}
+    .tag{display:inline-block;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;background:#eef2ff;color:#3730a3;margin-right:.4rem}
+
+    /* Responsividade */
+    @media(min-width:760px){
+      .hero{grid-template-columns:1fr 360px}
+      .hero h1{font-size:2.25rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Portifólio</div>
+        <div class="spacer"></div>
+        <a class="button" href="#sobre">Sobre</a>
+        <a class="button" href="#projetos">Projetos</a>
+        <a class="button" href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div>
+          <h1>Olá. Sejam Bem- Vindos. Eu sou Maria Fernanda</h1>
+          <p>Um site simples apenas em um único arquivo HTML. Aqui você encontra uma apresentação, projetos e um jeito fácil de entrar em contato.</p>
+          <p style="margin-top:1rem">
+            <a class="button-primary" href="#contato">Me mande uma mensagem</a>
+          </p>
+
+          <div class="card-grid" style="margin-top:1.5rem">
+            <article class="card">
+              <h3>Habilidades</h3>
+              <p style="margin:.5rem 0">HTML sem bibliotecas — estrutura sem JavaScript externo. Ideal para hospedagem simples (GitHub Pages, Netlify).</p>
+              <p style="margin-top:.6rem"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsivo</span></p>
+            </article>
+
+            <article class="card">
+              <h3>Serviços</h3>
+              <ul style="margin-top:.5rem;line-height:1.6">
+                <li>Landing pages simples</li>
+                <li>Portfólios</li>
+                <li>Páginas estáticas para apresentação</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Observação</h3>
+              <p style="margin-top:.5rem">Aprendendo a implementar sistema da melhor forma!</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="card" aria-labelledby="sobre">
+          <h2 id="sobre">Sobre mim</h2>
+          <p style="margin-top:.5rem">Estudante de Análise e Desenvolvimento de Sistemas. Gosto de front-end, design simples e performance. Aqui deixo alguns projetos e como me contatar.</p>
+          <h4 style="margin-top:1rem">Perfil</h4>
+          <ul style="margin-top:.5rem;line-height:1.6">
+            <li>Nome: Maria Fernanda</li>
+            <li>Idade: 20</li>
+            <li>Interesses: Planetas, programação, Designer (Front-end)</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="projetos" style="margin-top:2rem">
+        <h2>Projetos</h2>
+        <div class="card-grid" style="margin-top:1rem">
+          <div class="card">
+            <h3>Plataforma Educacional (TCC)</h3>
+            <p>Projeto de TCC integrando Python, Cibersegurança e LGPD para inclusão digital.</p>
+            <p style="margin-top:.6rem"><small>ADICIONAR LINK</small></p>
+          </div>
+
+          <div class="card">
+            <h3>Banner para Canva</h3>
+            <p>///////////////////////////////////</p>
+          </div>
+
+          <div class="card">
+            <h3>Resumo Acadêmico</h3>
+            <p>Materiais de resumo para provas e tópicos importantes de programação em C e estruturas de dados.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" style="margin-top:2rem">
+        <h2>Contato</h2>
+        <div class="card" style="margin-top:1rem">
+          <p>Quer falar comigo? Mande um e-mail ou abra uma conversa no WhatsApp:</p>
+          <p style="margin-top:.6rem">✉️ <a href="mailto:seu-email@exemplo.com">mahgaspir490@gmail.com</a></p>
+          <p style="margin-top:.6rem">📱 <a href="https://wa.me/5591999999999" target="_blank" rel="noopener">WhatsApp</a> 11-968163920</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <small>Criado por Maria Fernanda! </small>
+      <small>Lançando novos projetos 🚀 </small>
+      <div>
+        <a href="#projetos">Projetos</a> · <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
